@@ -21,6 +21,7 @@ const ModalVideo= (props)=>{
       
       if(message) {
         setMessages(messages => [ ...messages, message ]);
+        setMessages(messages => [ ...messages, {user:"Chaty",text:"Respondiendo cualquier cosa siempre"} ]);
         //socket.emit('sendMessage', message, () => setMessage(''));
         console.log(messages);
         setMessage({user:"me",text:""});
