@@ -9,7 +9,7 @@ import Mensajes from '../../components/Mensajes/Mensajes';
 import "../../assets/css/modalchat.css";
 const ModalVideo= (props)=>{
     //const [carga,setCarga]=useState(false);
-    const [name, setName] = useState('uis');
+    const [name, setName] = useState('me');
     const [room, setRoom] = useState('');
     const [users, setUsers] = useState('');
     const [message, setMessage] = useState('');
@@ -23,7 +23,7 @@ const ModalVideo= (props)=>{
         setMessages(messages => [ ...messages, message ]);
         //socket.emit('sendMessage', message, () => setMessage(''));
         console.log(messages);
-        setMessage({user:"luis",text:""});
+        setMessage({user:"me",text:""});
       }
     }
     return (
