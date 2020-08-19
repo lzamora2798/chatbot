@@ -8,7 +8,7 @@ const floatbot =(props) => {
         <Container className="mr-0 pr-0">   
         <Button
             tooltip="AUTOBOT!"
-            rotate={true}
+            
             onClick={props.onClick}
             ><HelpIcon/></Button>
         </Container>
@@ -18,3 +18,4 @@ const floatbot =(props) => {
 export default floatbot;
 
 // onClick={() => alert('FAB Rocks!')}
+//rotate={true}
