@@ -27,13 +27,13 @@ function LandingPageHeader() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/bg6.jpg") + ")",
+            backgroundImage: "url(" + require("assets/img/restaurante.jpg") + ")",
           }}
           ref={pageHeader}
         ></div>
         <div className="content-center">
           <Container>
-            <h1 className="title">This is our great company.</h1>
+            <h1 className="title">BIENVENIDOS A JALUMI.</h1>
             <div className="text-center">
               <Button
                 className="btn-icon btn-round"
