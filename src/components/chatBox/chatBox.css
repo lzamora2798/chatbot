@@ -1,0 +1,15 @@
+.Box {
+    position: fixed;
+    bottom: 18px;
+    border-radius: 20px;
+    right: 20px;
+    min-height: 500px;
+    min-width: 400px;
+    background-color:#55acee;
+    z-index: 100;
+  }
+.icono{
+    position: relative;
+    color:white;
+    left: 355px;
+}

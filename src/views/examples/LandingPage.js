@@ -16,8 +16,9 @@ import {
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
-import ModalVideo from "./modalChat.js"
+
 import Floatbot from 'views/examples/floatingbut.js';
+import Chatbox from "components/chatBox/chatBox.js";
 function LandingPage() {
   const [firstFocus, setFirstFocus] = useState(false);
   const [lastFocus, setLastFocus] = useState(false);
@@ -34,18 +35,20 @@ function LandingPage() {
     };
   }, []);
   const showModal = () =>{
-    console.log("entra")
     setModalShow(true);
+  }
+  const quitModal = () =>{
+    setModalShow(false);
   }
   return (
     <>
-      <ModalVideo 
-      show={modalShow}
-      onHide={()=>setModalShow(false)}        
-      />
+      
       
       <ExamplesNavbar />
+      
       <div className="wrapper">
+      {modalShow ? <Chatbox onClick={()=>quitModal()}/> :null}
+      
         <LandingPageHeader />
         <div className="section section-about-us">
           <Container>

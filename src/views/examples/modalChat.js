@@ -7,6 +7,19 @@ import Mensajes from '../../components/Mensajes/Mensajes';
 
 
 import "../../assets/css/modalchat.css";
+// style='width: 100%; min-height: 200px;'
+const demos = {
+  chat:
+  "<iframe src='https://webchat.botframework.com/embed/basepreguntaschatbot-bot?s=KK2rQKfaorc.ilCUxtk3Hk21X7NE8mwL5JBsx8pkKc6dXtA7fg3epQ8'  style='width: 100%; min-height: 200px;bottom:0;'></iframe>"
+};
+const Iframe =(props) =>{
+  return (
+    <div
+      dangerouslySetInnerHTML={{ __html: props.iframe ? props.iframe : "" }}
+    />
+  );
+}
+
 const ModalVideo= (props)=>{
     //const [carga,setCarga]=useState(false);
     const [name, setName] = useState('me');
@@ -14,8 +27,13 @@ const ModalVideo= (props)=>{
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
     const [robot] = useState(["How do you do, fellow human", "I am not a bot"]);
+    const [appState, setAppState] = useState({
+      loading: false,
+      repos: null,
+    });
+    
+
     const [alternative] = useState([
-  
       "Same",
       "Go on...",
       "Try again",
@@ -102,18 +120,15 @@ const ModalVideo= (props)=>{
     } else {
         product = alternative[Math.floor(Math.random() * alternative.length)];
     }
-      
     //update DOM
     //addChat(input, product);
     setMessages(messages => [ ...messages, {user:"Chaty",text:product} ]);
         //socket.emit('sendMessage', message, () => setMessage(''));
 }
 
-
-
     const sendMessage = (event) => {
       event.preventDefault();
-      
+      console.log("mas info",appState.repos);
       if(message) {
         setMessages(messages => [ ...messages, message ]);
         //setMessages(messages => [ ...messages, {user:"Chaty",text:"Respondiendo cualquier cosa siempre"} ]);
@@ -124,32 +139,31 @@ const ModalVideo= (props)=>{
       }
     }
     return (
-       <Modal
-          {...props}
-          aria-labelledby="contained-modal-title-vcenter"
-          centered    
-          dialogClassName="modal"  
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title-vcenter">
-              ChatBot
-              <Person/>
-            </Modal.Title>
-            
-          </Modal.Header>
-          <Modal.Body>  
-            <div className="messagebox">
-            <Mensajes messages={messages} name={name} />
-            </div>
-          </Modal.Body>
-          < Modal.Footer>
-          <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
-          </Modal.Footer>
-        </Modal>
-      );
+      <Modal
+         {...props}
+         aria-labelledby="contained-modal-title-vcenter"
+         centered    
+         dialogClassName="modal"  
+       >
+         <Modal.Header closeButton>
+           <Modal.Title id="contained-modal-title-vcenter">
+             ChatBot
+             <Person/>
+           </Modal.Title>
+           
+         </Modal.Header>
+         <Modal.Body>  
+           <Iframe iframe={demos["chat"]} allow="autoplay"></Iframe>
+           
+         </Modal.Body>
+        
+       </Modal>
+     );
       
 }
 
 
 
 export default ModalVideo;
+//<Mensajes messages={messages} name={name} />
+// <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
