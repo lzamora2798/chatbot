@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/chatbot/static/css/main.92c34630.chunk.css",
+    "main.js": "/chatbot/static/js/main.e1f4ed4e.chunk.js",
+    "main.js.map": "/chatbot/static/js/main.e1f4ed4e.chunk.js.map",
+    "runtime-main.js": "/chatbot/static/js/runtime-main.56d9e5c4.js",
+    "runtime-main.js.map": "/chatbot/static/js/runtime-main.56d9e5c4.js.map",
+    "static/js/2.81dd9a71.chunk.js": "/chatbot/static/js/2.81dd9a71.chunk.js",
+    "static/js/2.81dd9a71.chunk.js.map": "/chatbot/static/js/2.81dd9a71.chunk.js.map",
+    "index.html": "/chatbot/index.html",
+    "precache-manifest.443345f145e5064d0ad226a35a464b04.js": "/chatbot/precache-manifest.443345f145e5064d0ad226a35a464b04.js",
+    "service-worker.js": "/chatbot/service-worker.js",
+    "static/css/main.92c34630.chunk.css.map": "/chatbot/static/css/main.92c34630.chunk.css.map",
+    "static/js/2.81dd9a71.chunk.js.LICENSE.txt": "/chatbot/static/js/2.81dd9a71.chunk.js.LICENSE.txt",
+    "static/media/avatar.jpg": "/chatbot/static/media/avatar.7257a1a9.jpg",
+    "static/media/bolon.jpg": "/chatbot/static/media/bolon.d01aa8a4.jpg",
+    "static/media/encebollado.jpeg": "/chatbot/static/media/encebollado.f3f80fad.jpeg",
+    "static/media/eva.jpg": "/chatbot/static/media/eva.089c4f4e.jpg",
+    "static/media/now-ui-kit.scss?v=1.4.0": "/chatbot/static/media/nucleo-outline.8ebec31f.woff2",
+    "static/media/restaurante.jpg": "/chatbot/static/media/restaurante.78007ab8.jpg",
+    "static/media/ryan.jpg": "/chatbot/static/media/ryan.f217f346.jpg",
+    "static/media/yapingacho.jpg": "/chatbot/static/media/yapingacho.345556df.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.56d9e5c4.js",
+    "static/js/2.81dd9a71.chunk.js",
+    "static/css/main.92c34630.chunk.css",
+    "static/js/main.e1f4ed4e.chunk.js"
+  ]
+}
